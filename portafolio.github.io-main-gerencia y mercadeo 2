@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portafolio Virtual — Gerencia y Mercadeo</title>
+  <style>
+    :root {
+      --cobre: #b87333;
+      --grafito: #2f2f2f;
+      --fondo: #1e1e1e;
+      --texto: #e0e0e0;
+      --muted: #888;
+      --blanco: #fff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: var(--fondo);
+      color: var(--texto);
+    }
+
+    aside {
+      width: 260px;
+      background: var(--grafito);
+      padding: 2rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      color: var(--cobre);
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    nav a {
+      display: block;
+      padding: 0.8rem 1rem;
+      margin-bottom: 0.5rem;
+      border-radius: 8px;
+      color: var(--texto);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover, nav a.active {
+      background: var(--cobre);
+      color: var(--blanco);
+    }
+
+    main {
+      flex: 1;
+      padding: 2rem;
+      overflow-y: auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    header h1 {
+      color: var(--cobre);
+      font-size: 2rem;
+    }
+
+    section.module {
+      margin-bottom: 1.2rem;
+      background: #2a2a2a;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    }
+
+    .module-header {
+      padding: 1rem 1.2rem;
+      background: var(--grafito);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      color: var(--cobre);
+    }
+
+    .module-content {
+      display: none;
+      padding: 1.2rem;
+      background: #1f1f1f;
+      line-height: 1.6;
+      font-size: 0.95rem;
+    }
+
+    .module.open .module-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-5px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .space { height: 20px; }
+
+    .btn-infografia {
+      display: inline-block;
+      background: var(--cobre);
+      color: var(--blanco);
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: opacity 0.3s ease;
+    }
+
+    .btn-infografia:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 768px) {
+      aside { display: none; }
+      body { flex-direction: column; }
+      main { padding: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <div>
+      <div class="logo">Portafolio Virtual</div>
+      <nav>
+        <a href="#perfil" class="active">Perfil</a>
+        <a href="#mod1">Módulo 1</a>
+        <a href="#mod2">Módulo 2</a>
+        <a href="#mod3">Módulo 3</a>
+        <a href="#mod4">Módulo 4</a>
+      </nav>
+    </div>
+    <footer style="text-align:center; font-size:0.8rem; color:var(--muted);">
+      © 2025 Gerencia y Mercadeo
+    </footer>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Portafolio Virtual — Gerencia y Mercadeo</h1>
+      <p>Presentación profesional y académica</p>
+    </header>
+
+    <!-- PERFIL DEL ESTUDIANTE -->
+    <section class="module open" id="perfil">
+      <div class="module-header">Perfil del Estudiante</div>
+      <div class="module-content">
+        <p><strong>Nombre:</strong> [ Edgar Linarez ]</p>
+        <p><strong>Descripción:</strong> Soy estudiante de Ingeniería Informática con interés en la gestión de proyectos, la innovación tecnológica y el área de mercadeo. Me apasiona comprender cómo la tecnología puede mejorar la eficiencia organizacional y fortalecer la toma de decisiones. Busco desarrollar habilidades que me permitan integrar soluciones informáticas con estrategias empresariales, contribuyendo al crecimiento y la competitividad de las organizaciones.</p>
+      </div>
+    </section>
+
+    <!-- MÓDULO 1 -->
+    <section class="module" id="mod1">
+      <div class="module-header">Módulo 1</div>
+      <div class="module-content">
+        <p><strong>Planificación Estratégica:</strong></p>
+        <p><em>Definición:</em> Conjunto de acciones para establecer objetivos a mediano y largo plazo y alinear los recursos disponibles hacia metas concretas.</p>
+        <p><em>Justificación:</em> Una planificación adecuada permite anticipar necesidades y evitar desviaciones en proyectos clave. Por ejemplo, al planear una campaña de ventas, organizar el calendario y los recursos evita retrasos y asegura cobertura efectiva.</p>
+        <p><em>Fuente:</em> Mintzberg, H. (1994). <em>The Rise and Fall of Strategic Planning</em>. Free Press.</p>
+        <div class="space"></div>
+
+        <p><strong>Liderazgo:</strong></p>
+        <p><em>Definición:</em> Capacidad de influir y motivar a los miembros del equipo para alcanzar objetivos comunes mediante comunicación clara y confianza.</p>
+        <p><em>Justificación:</em> Un liderazgo efectivo organiza tareas y gestiona conflictos. Por ejemplo, al coordinar un proyecto de lanzamiento de producto, un buen líder garantiza que todos comprendan sus roles y se cumplan los plazos sin pérdida de calidad.</p>
+        <p><em>Fuente:</em> Northouse, P. G. (2018). <em>Leadership: Theory and Practice</em>. Sage Publications.</p>
+        <div class="space"></div>
+
+        <p><strong>Gestión del Cambio:</strong></p>
+        <p><em>Definición:</em> Estrategias para facilitar la transición de procesos, tecnología o estructuras, minimizando resistencia y errores.</p>
+        <p><em>Justificación:</em> Implementar cambios sin acompañamiento puede generar confusión. Por ejemplo, al introducir un nuevo sistema CRM, la capacitación y guías prácticas ayudan a que los empleados adopten la herramienta rápidamente y sin errores.</p>
+        <p><em>Fuente:</em> Hiatt, J. (2006). <em>ADKAR: A Model for Change in Business, Government and our Community</em>. Prosci Research.</p>
+        <div class="space"></div>
+
+        <p><strong>Toma de Decisiones:</strong></p>
+        <p><em>Definición:</em> Proceso de evaluar opciones y seleccionar la alternativa que mejor cumpla los objetivos organizacionales considerando riesgos y beneficios.</p>
+        <p><em>Justificación:</em> Decidir con base en análisis evita desperdicio de recursos. Por ejemplo, al seleccionar proveedores, comparar costos, tiempos y calidad permite garantizar eficiencia sin comprometer presupuesto.</p>
+        <p><em>Fuente:</em> Simon, H. A. (1997). <em>Administrative Behavior</em>. Free Press.</p>
+        <div class="space"></div>
+
+        <p><strong>Estructura Organizacional:</strong></p>
+        <p><em>Definición:</em> Distribución formal de roles, responsabilidades y canales de comunicación para coordinar esfuerzos hacia metas comunes.</p>
+        <p><em>Justificación:</em> Una estructura clara evita duplicidad de tareas y mejora la eficiencia. Por ejemplo, en un equipo de ventas, asignar roles específicos permite que cada miembro se enfoque en objetivos concretos y se reduzcan errores de coordinación.</p>
+        <p><em>Fuente:</em> Daft, R. L. (2016). <em>Organization Theory and Design</em>. Cengage Learning.</p>
+        <div class="space"></div>
+
+        <!-- Infografía con enlace -->
+        <p><strong>Infografía:</strong></p>
+        <div style="border:1px dashed var(--cobre); padding:1rem; text-align:center; border-radius:8px;">
+          <a href="https://drive.google.com/file/d/1S1wy-p3QTBR0aEfSSoG23KFfoa-ET4rz/view?usp=drivesdk"
+             target="_blank"
+             class="btn-infografia">Ver Infografía en Google Drive</a>
+        </div>
+        <div class="space"></div>
+
+      </div>
+    </section>
+
+    <!-- MÓDULO 2 -->
+    <section class="module" id="mod2">
+      <div class="module-header">Módulo 2</div>
+      <div class="module-content">
+        <em>Contenido pendiente de agregar...</em>
+      </div>
+    </section>
+
+    <!-- MÓDULO 3 -->
+    <section class="module" id="mod3">
+      <div class="module-header">Módulo 3</div>
+      <div class="module-content">
+        <em>Contenido pendiente de agregar...</em>
+      </div>
+    </section>
+
+    <!-- MÓDULO 4 -->
+    <section class="module" id="mod4">
+      <div class="module-header">Módulo 4</div>
+      <div class="module-content">
+        <em>Contenido pendiente de agregar...</em>
+      </div>
+    </section>
+
+  </main>
+
+  <script>
+    const modules = document.querySelectorAll('.module');
+    const navLinks = document.querySelectorAll('nav a');
+
+    modules.forEach(m => {
+      m.querySelector('.module-header').addEventListener('click', () => {
+        m.classList.toggle('open');
+      });
+    });
+
+    navLinks.forEach(a => {
+      a.addEventListener('click', e => {
+        navLinks.forEach(l => l.classList.remove('active'));
+        e.target.classList.add('active');
+        const id = a.getAttribute('href').substring(1);
+        const el = document.getElementById(id);
+        if(el){
+          el.classList.add('open');
+          el.scrollIntoView({behavior:'smooth'});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
